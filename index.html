@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next-Gen Productivity & Cash Book</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --font-main: 'Inter', sans-serif;
+
+            --color-light-bg: #f7f8fa;
+            --color-light-surface: #ffffff;
+            --color-light-text-primary: #1a1a1a;
+            --color-light-text-secondary: #6b7280;
+            --color-light-border: #e5e7eb;
+            --color-light-accent: #3b82f6;
+            --color-light-accent-text: #ffffff;
+            --color-light-success: #10b981;
+            --color-light-danger: #ef4444;
+            --color-light-warning: #f59e0b;
+            --color-light-shadow: rgba(99, 99, 99, 0.1);
+
+            --color-dark-bg: #111827;
+            --color-dark-surface: #1f2937;
+            --color-dark-text-primary: #f9fafb;
+            --color-dark-text-secondary: #9ca3af;
+            --color-dark-border: #374151;
+            --color-dark-accent: #60a5fa;
+            --color-dark-accent-text: #111827;
+            --color-dark-success: #34d399;
+            --color-dark-danger: #f87171;
+            --color-dark-warning: #fbbf24;
+            --color-dark-shadow: rgba(0, 0, 0, 0.2);
+        }
+
+        [data-theme="light"] {
+            --bg-color: var(--color-light-bg);
+            --surface-color: var(--color-light-surface);
+            --text-primary: var(--color-light-text-primary);
+            --text-secondary: var(--color-light-text-secondary);
+            --border-color: var(--color-light-border);
+            --accent-color: var(--color-light-accent);
+            --accent-text-color: var(--color-light-accent-text);
+            --success-color: var(--color-light-success);
+            --danger-color: var(--color-light-danger);
+            --warning-color: var(--color-light-warning);
+            --shadow-color: var(--color-light-shadow);
+        }
+
+        [data-theme="dark"] {
+            --bg-color: var(--color-dark-bg);
+            --surface-color: var(--color-dark-surface);
+            --text-primary: var(--color-dark-text-primary);
+            --text-secondary: var(--color-dark-text-secondary);
+            --border-color: var(--color-dark-border);
+            --accent-color: var(--color-dark-accent);
+            --accent-text-color: var(--color-dark-accent-text);
+            --success-color: var(--color-dark-success);
+            --danger-color: var(--color-dark-danger);
+            --warning-color: var(--color-dark-warning);
+            --shadow-color: var(--color-dark-shadow);
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            height: 100%;
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+           
+        }
+        
+        #root {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--bg-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (min-width: 800px) {
+            #root {
+                flex-direction: row;
+            }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.21.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.1.1"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
